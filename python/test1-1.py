@@ -14,13 +14,15 @@ wait_place = ["札幌","大阪"]
 get_place = ["横浜"]
 
 for place in all_place:
-    if place == get_place:
+    if place in get_place:
         print(place + "のチケットが当選しました！")
-    elif place ==wait_place:
+    elif place in wait_place:
         print(place + "のチケットは結果待ち")
     else:
         print(place + "のチケットは落選しました")
 
 #問題2　問2-1
-s="{get_place}と{wait_place}のチケットが当選しました！"
-s.format[get_place,wait_place]
+
+s="{0}と{1}と{2}のチケットが当選しました！"
+s.format=["札幌","大阪","横浜"]
+print(s)
