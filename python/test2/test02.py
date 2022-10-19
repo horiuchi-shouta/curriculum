@@ -6,38 +6,36 @@ while True:
         print('3: 例外を発生させない')
         print('4: 終了')
         number = int(input('選択してください。: '))
-        # 問①：if文を用いて、以下の画像のように処理されるように記述しましょう。
-    if number <=1:
-        print('ValueError例外を発生')
-    except ValueError as IndexError:
+       
+    # 問①：if文を用いて、以下の画像のように処理されるように記述しましょう。
+    except ValueError  as e:
+        print(e.args)
         continue
-    # 問②：else節を用いて、以下の画像のように処理されるように記述しましょう。
+    except IndexError  as e:
+        print(e.args)
+        continue
+    if number <=1 and :
+            print('↓')
+            print('ValueError例外を発生')
+            print('↓')
+            print('もう一度選択しましょう')
+    
     elif number <=2:
-        print('IndexError例外を発生')
+            print('↓')
+            print('IndexError例外を発生')
+            print('↓')
+            print('もう一度選択しましょう')
+
     elif number <=3:
-        print('例外を発生させませんでした')
+            print('↓')
+            print('例外を発生させない')
+            print('↓')
+            print('もう一度選択しましょう')
+    # 問②：else節を用いて、以下の画像のように処理されるように記述しましょう。
+
     else:
         print('終了します')
         break
 
-#        except ValueError as IndexError:
-#        print('ValueError')
-#        continue
-
-    ##ここに書く
-   
-   
-#    try:
-#        number = int(input('10までの数値を入力してください: '))
-#        # 問①：ValueError例外を処理するコードを記述してください。
-#        print('数字以外が入力されました。数字のみを入力してください')
-#
-#        continue
-#    if answer< number:   #10<number
-#        print('もっと小さな数値です')
-#    elif number < answer: # number<10
-#        print('もっと大きな数値です')
- #   else:
- #       break
 print('↓')
 print('無限ループを終了します')
