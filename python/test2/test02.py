@@ -6,36 +6,32 @@ while True:
         print('3: 例外を発生させない')
         print('4: 終了')
         number = int(input('選択してください。: '))
-       
-    # 問①：if文を用いて、以下の画像のように処理されるように記述しましょう。
-    except ValueError  as e:
+        #input関数とは、ユーザーがキーボードに入力したデータを受け付けるための関数
+        
+        
+    except ValueError as e:
         print(e.args)
         continue
-    except IndexError  as e:
-        print(e.args)
-        continue
-    if number <=1 and :
-            print('↓')
-            print('ValueError例外を発生')
-            print('↓')
-            print('もう一度選択しましょう')
-    
-    elif number <=2:
-            print('↓')
-            print('IndexError例外を発生')
-            print('↓')
-            print('もう一度選択しましょう')
 
-    elif number <=3:
-            print('↓')
-            print('例外を発生させない')
-            print('↓')
-            print('もう一度選択しましょう')
-    # 問②：else節を用いて、以下の画像のように処理されるように記述しましょう。
-
-    else:
+        # 問①：if文を用いて、以下の画像のように処理されるように記述しましょう。
+    if number==4:
         print('終了します')
         break
+
+    elif number==1:
+        
+        print('↓')
+        print('ValueError')
+        print(e.args)
+        print('↓')
+        print('もう一度選択しましょう')
+
+    else:
+        print('１以外')
+    
+
+    # 問②：else節を用いて、以下の画像のように処理されるように記述しましょう。
+    ##ここに書く
 
 print('↓')
 print('無限ループを終了します')
