@@ -2,9 +2,7 @@
  *ターミナル上で[javac -encoding UTF-8 main.java]でコンパイル(mainはクラス名)
  *[java main.java]で実行(mainはファイル名)
  * バブルソート
- * チェックテスト-Java３章
- *
- */
+ * チェックテスト-Java３章 */
 public class Main{
     public static void main(String[] args){
         /*
@@ -21,23 +19,19 @@ public class Main{
             System.out.print(data[i] + " ");
         }
         System.out.println();
+        //ここまで完成済み。
 
-
-        /*ここまで完成済み。
-        */
-
-
-
-        for (int i = 0; i < data; i++) {     /*i++がないと無限ループに入る。実行ごとに i が一増える。*/
-            for (int j = 7 ; j > i; j--) {  /*j--は実行ごとに i が１減る。*/
+        for (int i = 0; i < data.length; i++) {     /*i++がないと無限ループに入る。実行ごとに i が一増える。*/
+            for (int j =i+1 ; j > i; j--) {  /*j--は実行ごとに i が１減る。*/
                 /*
                 * 問3
-                * 以下、配列の添字を入れてソートを完成させなさい
+                * 以下、配列の添字を入れてソートを完成させなさい.バブルソートというもの
                 */
-                if(data[j] > data[i]){
+                if(data[i] > data[j]){
+                  //if文で条件に当てはまる値の比較を行い、並び替え
                   int box = data[i];
-                  data[/*ここに記述*/] = data[/*ここに記述*/];
-                  data[/*ここに記述*/] = box;
+                  data[i] = data[j];
+                  data[j] = box;
                 }
             }
         }
